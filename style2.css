@@ -1,5 +1,536 @@
-html, body, .container {height: 100%; margin: 0;}
-#infos {height: 100%; margin: 0;}
+html, body, .container{height: 100%; margin: 0;}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px){
+    
+header { grid-area: header; }
+#categories {grid-area: categories; }
+#content { grid-area: main; }
+footer { grid-area: footer; }
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 120px 65px auto 80px;
+    grid-template-areas: 
+                "header"
+                "buttons"
+                "main"
+                "footer";
+}
+
+
+header {
+    background-color: rgb(2,160,253);
+    color: white;
+    text-indent: 1%;
+}
+
+#buttons{
+    width : 100%;
+    display : flex;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(69, 187, 255);
+}
+
+#buttons div { width: 50%;}
+#buttons div p { text-align: center; font-size: 18pt;} 
+
+#buttons #right_buttons{
+    background-color: rgb(2,160,253);
+}
+
+#buttons #right_buttons:hover{
+    transition: .5s;
+    background-color: rgb(69, 187, 255);
+}
+
+#articles { grid-area: articles; }
+#infos {grid-area: infos; }
+#articles2 { grid-area: articles2; }
+#infos2 {grid-area: infos2; }
+
+.container #content{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 300px 300px;
+    grid-template-areas: 
+                "articles infos"
+                "articles2 infos2";
+    background-color: rgb(228, 228, 228);
+    border: solid rgb(228, 228, 228) 20px;
+    
+}
+
+.container #content #articles{
+    text-align : center;
+}
+
+#title { grid-area: title; }
+#description {grid-area: description; }
+#heureprix {grid-area: heureprix; }
+
+.container #content #infos{
+    grid-template-columns: auto;
+    grid-template-rows: 20px auto 5px;
+    grid-template-areas: 
+                "title"
+                "description"
+                "heureprix";
+    
+}
+
+.container #content #infos #title{
+    font-weight: bold;
+    font-size: 14pt;
+    background-color: white;
+    padding: 2px;
+    text-indent: 5px;
+}
+
+.container #content #infos #description{
+    background-color: white;
+    padding: 2px;
+    text-indent: 5px;
+}
+
+#heureprix{
+    display : flex;
+}
+
+#heureprix div { 
+    width: 50%;
+    background-color: white;
+    padding: 12px 20px;
+}
+
+#heureprix #prix { 
+    text-align: right;
+}
+
+#title2 { grid-area: title2; }
+#description2 {grid-area: description2; }
+#heureprix2 {grid-area: heureprix2; }
+
+.container #content #infos2{
+    grid-template-columns: auto;
+    grid-template-rows: 20px auto 5px;
+    grid-template-areas: 
+                "title2"
+                "description2"
+                "heureprix2";
+}
+
+.container #content #articles2{
+    text-align : center;
+}
+
+#title { grid-area: title; }
+#description {grid-area: description; }
+#heureprix {grid-area: heureprix; }
+
+.container #content #infos2{
+    grid-template-columns: auto;
+    grid-template-rows: 20px auto 5px;
+    grid-template-areas: 
+                "title"
+                "description"
+                "heureprix";
+    
+}
+
+.container #content #infos2 #title2{
+    font-weight: bold;
+    font-size: 14pt;
+    background-color: white;
+    padding: 2px;
+    text-indent: 5px;
+}
+
+.container #content #infos2 #description2{
+    background-color: white;
+    padding: 2px;
+    text-indent: 5px;
+}
+
+
+#heureprix2{
+    display : flex;
+}
+
+#heureprix2 div { 
+    width: 50%;
+    background-color: white;
+    padding: 12px 20px;
+}
+
+#heureprix2 #prix2 { 
+    text-align: right;
+}
+
+footer {
+    background-color: rgb(2,160,253);
+    color: white;
+    text-indent: 3%;
+}
+
+}
+
+@media screen and (min-width: 1280px){
+    
+header { grid-area: header; }
+#categories {grid-area: categories; }
+#content { grid-area: main; }
+footer { grid-area: footer; }
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 120px 65px auto 80px;
+    grid-template-areas: 
+                "header"
+                "buttons"
+                "main"
+                "footer";
+}
+
+
+header {
+    background-color: rgb(2,160,253);
+    color: white;
+    text-indent: 1%;
+}
+
+#buttons{
+    width : 100%;
+    display : flex;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#buttons div { width: 50%;}
+#buttons div p { text-align: center; font-size: 18pt;} 
+
+#buttons #left_buttons{
+    background-color: rgb(69, 187, 255);
+}
+
+#buttons #right_buttons{
+    background-color: rgb(2,160,253);
+}
+
+
+#articles { grid-area: articles; }
+#infos {grid-area: infos; }
+#articles2 { grid-area: articles2; }
+#infos2 {grid-area: infos2; }
+
+.container #content{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 300px 300px;
+    grid-template-areas: 
+                "articles infos"
+                "articles2 infos2";
+    background-color: rgb(228, 228, 228);
+    border: solid rgb(228, 228, 228) 20px;
+    
+}
+
+.container #content #articles{
+    text-align : center;
+}
+
+#title { grid-area: title; }
+#description {grid-area: description; }
+#heureprix {grid-area: heureprix; }
+
+.container #content #infos{
+    grid-template-columns: auto;
+    grid-template-rows: 20px auto 5px;
+    grid-template-areas: 
+                "title"
+                "description"
+                "heureprix";
+    
+}
+
+.container #content #infos #title{
+    font-weight: bold;
+    font-size: 14pt;
+    background-color: white;
+    padding: 2px;
+    text-indent: 5px;
+}
+
+.container #content #infos #description{
+    background-color: white;
+    padding: 2px;
+    text-indent: 5px;
+}
+
+#heureprix{
+    display : flex;
+}
+
+#heureprix div { 
+    width: 50%;
+    background-color: white;
+    padding: 12px 20px;
+}
+
+#heureprix #prix { 
+    text-align: right;
+}
+
+#title2 { grid-area: title2; }
+#description2 {grid-area: description2; }
+#heureprix2 {grid-area: heureprix2; }
+
+.container #content #infos2{
+    grid-template-columns: auto;
+    grid-template-rows: 20px auto 5px;
+    grid-template-areas: 
+                "title2"
+                "description2"
+                "heureprix2";
+}
+
+.container #content #articles2{
+    text-align : center;
+}
+
+#title { grid-area: title; }
+#description {grid-area: description; }
+#heureprix {grid-area: heureprix; }
+
+.container #content #infos2{
+    grid-template-columns: auto;
+    grid-template-rows: 20px auto 5px;
+    grid-template-areas: 
+                "title"
+                "description"
+                "heureprix";
+    
+}
+
+.container #content #infos2 #title2{
+    font-weight: bold;
+    font-size: 14pt;
+    background-color: white;
+    padding: 2px;
+    text-indent: 5px;
+}
+
+.container #content #infos2 #description2{
+    background-color: white;
+    padding: 2px;
+    text-indent: 5px;
+}
+
+
+#heureprix2{
+    display : flex;
+}
+
+#heureprix2 div { 
+    width: 50%;
+    background-color: white;
+    padding: 12px 20px;
+}
+
+#heureprix2 #prix2 { 
+    text-align: right;
+}
+
+footer {
+    background-color: rgb(2,160,253);
+    color: white;
+    text-indent: 3%;
+}
+
+}
+
+@media screen and (max-width: 1024px){
+    
+    header { grid-area: header; }
+    #categories {grid-area: categories; }
+    #content { grid-area: main; }
+    footer { grid-area: footer; }
+    
+    .container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 120px 65px auto 80px;
+        grid-template-areas: 
+                    "header"
+                    "buttons"
+                    "main"
+                    "footer";
+    }
+    
+    
+    header {
+        background-color: rgb(2,160,253);
+        color: white;
+        text-indent: 1%;
+    }
+    
+    #buttons{
+        width : 100%;
+        display : flex;
+        color: white;
+        cursor: pointer;
+        background-color: rgb(69, 187, 255);
+    }
+    
+    #buttons div { width: 50%;}
+    #buttons div p { text-align: center; font-size: 18pt;} 
+    
+    #buttons #right_buttons{
+        background-color: rgb(2,160,253);
+    }
+
+    #buttons #right_buttons:hover{
+        transition: .5s;
+        background-color: rgb(69, 187, 255);
+    }
+    
+    
+    #articles { grid-area: articles; }
+    #infos {grid-area: infos; }
+    #articles2 { grid-area: articles2; }
+    #infos2 {grid-area: infos2; }
+    
+    .container #content{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: 300px 300px;
+        grid-template-areas: 
+                    "articles infos"
+                    "articles2 infos2";
+        background-color: rgb(228, 228, 228);
+        border: solid rgb(228, 228, 228) 20px;
+        
+    }
+    
+    .container #content #articles{
+        text-align : center;
+    }
+    
+    #title { grid-area: title; }
+    #description {grid-area: description; }
+    #heureprix {grid-area: heureprix; }
+    
+    .container #content #infos{
+        grid-template-columns: auto;
+        grid-template-rows: 20px auto 5px;
+        grid-template-areas: 
+                    "title"
+                    "description"
+                    "heureprix";
+        
+    }
+    
+    .container #content #infos #title{
+        font-weight: bold;
+        font-size: 14pt;
+        background-color: white;
+        padding: 2px;
+        text-indent: 5px;
+    }
+    
+    .container #content #infos #description{
+        background-color: white;
+        padding: 2px;
+        text-indent: 5px;
+    }
+    
+    #heureprix{
+        display : flex;
+    }
+    
+    #heureprix div { 
+        width: 50%;
+        background-color: white;
+        padding: 12px 20px;
+    }
+    
+    #heureprix #prix { 
+        text-align: right;
+    }
+    
+    #title2 { grid-area: title2; }
+    #description2 {grid-area: description2; }
+    #heureprix2 {grid-area: heureprix2; }
+    
+    .container #content #infos2{
+        grid-template-columns: auto;
+        grid-template-rows: 20px auto 5px;
+        grid-template-areas: 
+                    "title2"
+                    "description2"
+                    "heureprix2";
+    }
+    
+    .container #content #articles2{
+        text-align : center;
+    }
+    
+    #title { grid-area: title; }
+    #description {grid-area: description; }
+    #heureprix {grid-area: heureprix; }
+    
+    .container #content #infos2{
+        grid-template-columns: auto;
+        grid-template-rows: 20px auto 5px;
+        grid-template-areas: 
+                    "title"
+                    "description"
+                    "heureprix";
+        
+    }
+    
+    .container #content #infos2 #title2{
+        font-weight: bold;
+        font-size: 14pt;
+        background-color: white;
+        padding: 2px;
+        text-indent: 5px;
+    }
+    
+    .container #content #infos2 #description2{
+        background-color: white;
+        padding: 2px;
+        text-indent: 5px;
+    }
+    
+    
+    #heureprix2{
+        display : flex;
+    }
+    
+    #heureprix2 div { 
+        width: 50%;
+        background-color: white;
+        padding: 12px 20px;
+    }
+    
+    #heureprix2 #prix2 { 
+        text-align: right;
+    }
+    
+    footer {
+        background-color: rgb(2,160,253);
+        color: white;
+        text-indent: 3%;
+    }
+    
+    }
+
+
+@media screen and (min-width: 1024px){
 
 header { grid-area: header; }
 #categories {grid-area: categories; }
@@ -17,6 +548,7 @@ footer { grid-area: footer; }
                 "footer";
 }
 
+
 header {
     background-color: rgb(2,160,253);
     color: white;
@@ -26,48 +558,155 @@ header {
 #buttons{
     width : 100%;
     display : flex;
-    background-color: rgb(2,160,253);
     color: white;
-
+    cursor: pointer;
+    background-color: rgb(69, 187, 255);
 }
+
 #buttons div { width: 50%;}
 #buttons div p { text-align: center; font-size: 18pt;} 
 
+#buttons #right_buttons{
+    background-color: rgb(2,160,253);
+}
+
+#buttons #right_buttons:hover{
+    transition: .5s;
+    background-color: rgb(69, 187, 255);
+}
+
+
 #articles { grid-area: articles; }
 #infos {grid-area: infos; }
+#articles2 { grid-area: articles2; }
+#infos2 {grid-area: infos2; }
 
 .container #content{
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: auto;
+    grid-template-rows: 300px 300px;
     grid-template-areas: 
-                "articles infos";
+                "articles infos"
+                "articles2 infos2";
+    background-color: rgb(228, 228, 228);
+    border: solid rgb(228, 228, 228) 20px;
+    
 }
 
-.container #content #infos{
-    justify-content: center;
+.container #content #articles{
+    text-align : center;
 }
+
 #title { grid-area: title; }
 #description {grid-area: description; }
 #heureprix {grid-area: heureprix; }
 
 .container #content #infos{
-    display: flex;
     grid-template-columns: auto;
     grid-template-rows: 20px auto 5px;
     grid-template-areas: 
                 "title"
                 "description"
                 "heureprix";
+    
 }
 
-#heureprix div { width: 50%;}
+.container #content #infos #title{
+    font-weight: bold;
+    font-size: 14pt;
+    background-color: white;
+    padding: 2px;
+    text-indent: 5px;
+}
+
+.container #content #infos #description{
+    background-color: white;
+    padding: 2px;
+    text-indent: 5px;
+}
+
+#heureprix{
+    display : flex;
+}
+
+#heureprix div { 
+    width: 50%;
+    background-color: white;
+    padding: 12px 20px;
+}
+
+#heureprix #prix { 
+    text-align: right;
+}
+
+#title2 { grid-area: title2; }
+#description2 {grid-area: description2; }
+#heureprix2 {grid-area: heureprix2; }
+
+.container #content #infos2{
+    grid-template-columns: auto;
+    grid-template-rows: 20px auto 5px;
+    grid-template-areas: 
+                "title2"
+                "description2"
+                "heureprix2";
+}
+
+.container #content #articles2{
+    text-align : center;
+}
+
+#title { grid-area: title; }
+#description {grid-area: description; }
+#heureprix {grid-area: heureprix; }
+
+.container #content #infos2{
+    grid-template-columns: auto;
+    grid-template-rows: 20px auto 5px;
+    grid-template-areas: 
+                "title"
+                "description"
+                "heureprix";
+    
+}
+
+.container #content #infos2 #title2{
+    font-weight: bold;
+    font-size: 14pt;
+    background-color: white;
+    padding: 2px;
+    text-indent: 5px;
+}
+
+.container #content #infos2 #description2{
+    background-color: white;
+    padding: 2px;
+    text-indent: 5px;
+}
+
+
+#heureprix2{
+    display : flex;
+}
+
+#heureprix2 div { 
+    width: 50%;
+    background-color: white;
+    padding: 12px 20px;
+}
+
+#heureprix2 #prix2 { 
+    text-align: right;
+}
 
 footer {
     background-color: rgb(2,160,253);
     color: white;
     text-indent: 3%;
 }
+
+}
+
 
 
 
