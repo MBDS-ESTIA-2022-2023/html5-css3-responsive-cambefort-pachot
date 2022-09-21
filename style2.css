@@ -1,0 +1,77 @@
+html, body, .container {height: 100%; margin: 0;}
+#infos {height: 100%; margin: 0;}
+
+header { grid-area: header; }
+#categories {grid-area: categories; }
+#content { grid-area: main; }
+footer { grid-area: footer; }
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 120px 65px auto 80px;
+    grid-template-areas: 
+                "header"
+                "buttons"
+                "main"
+                "footer";
+}
+
+header {
+    background-color: rgb(2,160,253);
+    color: white;
+    text-indent: 1%;
+}
+
+#buttons{
+    width : 100%;
+    display : flex;
+    background-color: rgb(2,160,253);
+    color: white;
+
+}
+#buttons div { width: 50%;}
+#buttons div p { text-align: center; font-size: 18pt;} 
+
+#articles { grid-area: articles; }
+#infos {grid-area: infos; }
+
+.container #content{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+                "articles infos";
+}
+
+.container #content #infos{
+    justify-content: center;
+}
+#title { grid-area: title; }
+#description {grid-area: description; }
+#heureprix {grid-area: heureprix; }
+
+.container #content #infos{
+    display: flex;
+    grid-template-columns: auto;
+    grid-template-rows: 20px auto 5px;
+    grid-template-areas: 
+                "title"
+                "description"
+                "heureprix";
+}
+
+#heureprix div { width: 50%;}
+
+footer {
+    background-color: rgb(2,160,253);
+    color: white;
+    text-indent: 3%;
+}
+
+
+
+
+
+
+

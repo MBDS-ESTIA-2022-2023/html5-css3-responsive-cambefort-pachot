@@ -1,0 +1,89 @@
+html, body, .container {height: 100%; margin: 0;}
+
+header { grid-area: header; }
+#content { grid-area: main; }
+footer { grid-area: footer; }
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 80px auto 65px;
+    grid-template-areas: 
+                "header"
+                "main"
+                "footer";
+}
+
+header {
+    background-color: rgb(2,160,253);
+    color: white;
+    text-indent: 4%;
+}
+
+#content .welcome{
+    background-color: lightgrey;
+    text-align: center;
+}
+
+.username { grid-area: username; }
+.password { grid-area: password; }
+.empty { grid-area: empty; }
+.button { grid-area: button; }
+
+#content .signin{
+    display: flex;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto 220px auto;
+    grid-template-areas: 
+                ". username username ."
+                ". password password ."
+                "empty empty empty empty"
+                ". button button .";
+    background-color: white;
+    flex-direction: column;  
+}
+
+footer {
+    background-color: rgb(2,160,253);
+    color: white;
+    text-indent: 3%;
+}
+
+input[type=text]{
+    background-color: lightgrey; 
+    border-radius: 2px;
+}
+
+input[type=password]{
+    background-color: lightgrey; 
+    border-radius: 2px;
+}
+
+#content .signin .username div  {
+    width: 50%;
+}
+
+#content .signin .username, #username {
+    padding: 12px 35%;
+    border: 0px solid #ccc;
+}
+
+#content .signin .password, #password {
+    padding: 12px 35%;
+    border: 0px solid #ccc;
+}
+
+#content .signin .button, #button{
+    padding: 12px 100px;
+    background-color: rgb(2,160,253);
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+
+
+
+
+
